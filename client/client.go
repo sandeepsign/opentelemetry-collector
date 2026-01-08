@@ -170,8 +170,8 @@ func (m Metadata) Get(key string) []string {
 		return nil
 	}
 
+	// Return a defensive copy to maintain immutability guarantee
 	ret := make([]string, len(vals))
 	copy(ret, vals)
-
 	return ret
 }
