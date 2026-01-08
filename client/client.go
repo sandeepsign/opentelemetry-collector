@@ -170,5 +170,8 @@ func (m Metadata) Get(key string) []string {
 		return nil
 	}
 
-	return vals
+	ret := make([]string, len(vals))
+	copy(ret, vals)
+
+	return ret
 }
